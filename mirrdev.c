@@ -29,3 +29,10 @@
  *   umount /dev/mirrdev2
  *   rmmod mirrdev.ko
  */
+
+
+#define MIRRDEV_MAJOR 72
+#define MIRRDEV_NAME "mirrdev"
+#define MIRRDEV_SECTORSHIFT (9)
+#define MIRRDEV_SECTORSIZE (1ULL<<MIRRDEV_SECTORSHIFT)
+#define MIRRDEV_SECTORMASK (~(MIRRDEV_SECTORSIZE-1))
